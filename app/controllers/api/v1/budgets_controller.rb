@@ -1,2 +1,3 @@
-class BudgetsController < ApplicationController
+class Api::V1::BudgetsController < ApplicationController
+
 end
