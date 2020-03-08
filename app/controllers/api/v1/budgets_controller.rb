@@ -8,7 +8,7 @@ class Api::V1::BudgetsController < ApplicationController
       end
     
       def show
-        @budget = Transaction.find(params[:id])
+        @budget = Budget.find(params[:id])
         render json: @budget
       end
     
@@ -18,6 +18,12 @@ class Api::V1::BudgetsController < ApplicationController
         render json: @category
       end
     
+      def update
+        @budget = Budget.find(params[:id])
+        @budget.update(budget_params)
+        render json: @budget
+      end
+
       def destroy
         @budget = Budget.find(params["id"])
         @category = Category.find(@budget.account_id)
