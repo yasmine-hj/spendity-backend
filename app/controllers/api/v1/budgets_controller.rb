@@ -39,7 +39,7 @@ class Api::V1::BudgetsController < ApplicationController
       private
     
       def set_category
-        @category = category.find(params[:category_id])
+        @category = Category.find(params[:category_id])
       end
     
     

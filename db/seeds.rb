@@ -8,40 +8,40 @@
 
 Category.create([{
         name: "GROCERIES",
-        image: "./img/groceries.png"
+        image: "groceries"
     },{
         name: "SHOPPING",
-        image: "./img/shopping.png"
+        image: "shopping"
     },{
         name: "RESTAURANTS",
-        image: "./img/restaurants.png"
+        image: "restaurants"
     },{
         name: "TRANSPORT",
-        image: "./img/transport.png"
+        image: "transport"
     },{
         name: "TRAVEL",
-        image: "./img/travel.png"
+        image: "travel"
     },{
         name: "UTILITIES",
-        image: "./img/utilities.png"
+        image: "utilities"
     },{
         name: "INSURANCE",
-        image: "./img/insurance.png"
+        image: "insurance"
     },{
         name: "GENERAL",
-        image: "./img/general.png"
+        image: "general"
     },{
         name: "ENTERTAINMENT",
-        image: "./img/entertainment.png"
+        image: "entertainment"
     },{
         name: "HEALTH",
-        image: "./img/health.png"
+        image: "health"
     },{
         name: "FAMILY",
-        image: "./img/family.png"
+        image: "family"
     },{
         name: "OTHER",
-        image: "./img/other.png"
+        image: "other"
     }
     ])
 

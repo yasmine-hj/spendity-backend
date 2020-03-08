@@ -5,7 +5,6 @@ class Api::V1::CategoriesController < ApplicationController
         @categories = Category.all
         render json: @categories
       end
-      
   # GET 
       def show
         @category = Category.find(params[:id])
