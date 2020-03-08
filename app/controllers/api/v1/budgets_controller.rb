@@ -2,28 +2,33 @@ class Api::V1::BudgetsController < ApplicationController
    
     before_action :set_category
 
+      # GET 
     def index
         @budgets = Budget.all
         render json: @budgets
       end
-    
+
+    # GET 
       def show
         @budget = Budget.find(params[:id])
         render json: @budget
       end
     
+    # POST
       def create
         @budget = @category.Budget.new(budget_params)
         @budget.save
         render json: @category
       end
     
+    # PATCH/PUT 
       def update
         @budget = Budget.find(params[:id])
         @budget.update(budget_params)
         render json: @budget
       end
 
+    # DELETE 
       def destroy
         @budget = Budget.find(params["id"])
         @category = Category.find(@budget.account_id)
