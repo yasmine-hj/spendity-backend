@@ -1,11 +1,16 @@
 class Api::V1::BudgetsController < ApplicationController
    
-    before_action :set_category
+    # before_action :set_category
 
       # GET 
     def index
-        @budgets = Budget.all
-        render json: @budgets
+        if !!params[:category_id]
+          @budgets = Budget.where(category_id: params[:category_id])
+          render json: @budgets
+        else
+          @budgets = Budget.all
+          render json: @budgets
+      end
       end
 
     # GET 

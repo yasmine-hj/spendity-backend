@@ -4,6 +4,9 @@ Rails.application.routes.draw do
       resources :categories do
         resources :budgets
       end
+      resources :budgets
+      resources :categories
     end
   end
+
 end
