@@ -39,7 +39,7 @@ class Api::V1::BudgetsController < ApplicationController
     # DELETE 
       def destroy
         @budget = Budget.find(params["id"])
-        category = Category.find(@budget.account_id)
+        category = Category.find(@budget.category_id)
         @budget.destroy
         render json: @category
       end
