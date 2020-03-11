@@ -1,6 +1,6 @@
 class Api::V1::BudgetsController < ApplicationController
    
-    # before_action :set_category
+    before_action :set_category
 
       # GET 
     def index
@@ -21,9 +21,12 @@ class Api::V1::BudgetsController < ApplicationController
     
     # POST
       def create
-        @budget = @category.Budget.new(budget_params)
-        @budget.save
+        @budget = @category.budgets.new(budget_params)
+        if @budget.save
         render json: @category
+        else
+          render json: { errors: budget.errors.full_messages}
+        end
       end
     
     # PATCH/PUT 
@@ -36,7 +39,7 @@ class Api::V1::BudgetsController < ApplicationController
     # DELETE 
       def destroy
         @budget = Budget.find(params["id"])
-        @category = Category.find(@budget.account_id)
+        category = Category.find(@budget.account_id)
         @budget.destroy
         render json: @category
       end
