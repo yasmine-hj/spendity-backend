@@ -5,6 +5,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Spendity is a simple budgeting app made to help you manage your money better!
 
 Budget how much you would like to spend per category.
+## Demo
+![demo](demo/demo.gif)
 
 ## Getting Started
 
