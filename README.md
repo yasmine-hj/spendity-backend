@@ -1,24 +1,31 @@
-# README
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Spendity
+## About
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Spendity is a simple budgeting app made to help you manage your money better!
 
-Things you may want to cover:
+Budget how much you would like to spend per category.
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+To start the app clone and start up both this repo and the frontend:
+### https://github.com/yasmine-hj/spendity-frontend
 
-* Configuration
+Then in the backend run
+### `bundle`
+### `rails db:migrate`
+### `rails db:seed`
+### `rails s`
 
-* Database creation
+Once your rails server has started jump onto the frontend repo and run
+### `npm i`
+### `npm start`
 
-* Database initialization
+Open [http://localhost:3001](http://localhost:3001) to view the app in  browser.
 
-* How to run the test suite
+## License
+This project is licensed under the MIT License - see the LICENSE.md file for details
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+
