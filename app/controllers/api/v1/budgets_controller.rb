@@ -45,11 +45,9 @@ class Api::V1::BudgetsController < ApplicationController
       end
     
       private
-    
       def set_category
         @category = Category.find(params[:category_id])
       end
-    
     
       def budget_params
         params.require(:budget).permit(:amount, :category_id, :currency, :notes, :start_date, :end_date)
